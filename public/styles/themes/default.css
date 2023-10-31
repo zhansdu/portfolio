@@ -1,0 +1,12 @@
+:root {
+  --white: #fff;
+  --darkwhite: #bebebe;
+
+  --purple: #1f011a;
+  --darkpurple: #0f020e;
+  
+  --black:#272727;
+
+  --transparent: transparent;
+  --inherit: inherit;
+}

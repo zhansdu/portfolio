@@ -1,0 +1,44 @@
+@use "./color_variables.scss" as v;
+
+$colors: (
+  "white": v.$white,
+  "darkwhite": v.$darkwhite,
+
+  "purple": v.$purple,
+  "darkpurple": v.$darkpurple,
+
+  "black": v.$black,
+
+  "transparent": v.$transparent,
+  "inherit": v.$inherit,
+);
+@each $name, $color in $colors {
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+  .text-#{$name} {
+    color: $color !important;
+  }
+  .border-#{$name} {
+    border-color: $color !important;
+  }
+  .outline-#{$name} {
+    color: $color !important;
+    border-color: $color !important;
+    background-color: v.$transparent;
+    &:hover:enabled {
+      background-color: $color !important;
+      color: v.$white !important;
+    }
+  }
+  .text-hover-#{$name} {
+    &:hover:enabled {
+      color: $color !important;
+    }
+  }
+  .bg-hover-#{$name} {
+    &:hover:enabled {
+      background-color: $color !important;
+    }
+  }
+}

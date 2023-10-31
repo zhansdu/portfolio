@@ -1,0 +1,22 @@
+
+@use "sass:math";
+
+$sizes: 9, 10, 12, 14, 16, 18, 20, 24, 28, 32, 36, 40, 42, 48, 64;
+
+@each $size in $sizes {
+  .font-size-#{$size} {
+    font-size: math.div($size, 16) + em;;
+  }
+}
+
+$radiuses: 4,10,15,20,24,28;
+
+@each $size in $radiuses {
+  .border-radius-#{$size} {
+    border-radius: math.div($size, 16) + em;;
+  }
+}
+
+.w-unset{
+  width:unset;
+}

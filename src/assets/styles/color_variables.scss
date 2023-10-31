@@ -1,0 +1,15 @@
+// this scss file may be imported in other different files
+
+
+// color variables are set in public/css/themes
+// themes are set in App.vue
+$white: var(--white);
+$darkwhite: var(--darkwhite);
+
+$purple: var(--purple);
+$darkpurple: var(--darkpurple);
+
+$black: var(--black);
+
+$transparent: var(--transparent);
+$inherit: var(--inherit);
