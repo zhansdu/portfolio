@@ -1,23 +1,23 @@
 <template>
-  <nav class="bg-purple-gradient text-darkwhite padding">
-    <div class="d-flex justify-content-between align-items-center py-4">
-      <!-- brand -->
-      <div class="brand">
-        ZHANSDU
-      </div>
-      <div class="d-flex cursor-pointer">
-        <a
-          class="py-4"
-          href="#home"
-        >Home</a>
-        <a
-          class="px-5 py-4"
-          href="#about"
-        >About</a>
-        <a
-          class="py-4"
-          href="#contact"
-        >Contact</a>
+  <nav class="fixed w-100 d-flex align-items-center justify-content-center">
+    <div class="bg-purple-gradient text-darkwhite padding nav-rounded">
+      <div class="d-flex justify-content-between align-items-center py-4">
+        <!-- brand -->
+        <div class="brand">
+          ZHANSDU
+        </div>
+        <div class="d-flex cursor-pointer">
+          <a
+            href="#home"
+          >Home</a>
+          <a
+            class="px-5"
+            href="#about"
+          >Reviews</a>
+          <a
+            href="#contact"
+          >Contact me</a>
+        </div>
       </div>
     </div>
   </nav>
@@ -44,5 +44,16 @@ export default defineComponent({
 <style scoped>
 .bg-purple-gradient{
   background:linear-gradient(var(--darkpurple),var(--purple))
+}
+.fixed{
+  position:fixed;
+  top:0;
+  left:0;
+}
+
+.nav-rounded{
+  width:50% !important;
+  margin-top: 10px;
+  border-radius:50px
 }
 </style>

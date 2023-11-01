@@ -1,7 +1,7 @@
 @use "./color_variables.scss" as v;
 
 
-@import './fonts.scss';
+@import './sizes.scss';
 @import './colors.scss';
 
 
@@ -25,6 +25,10 @@
 
 *:focus {
   outline: none !important;
+}
+
+html,body,#app{
+  height:100%;
 }
 
 a{
@@ -77,6 +81,22 @@ button {
 
 .cursor-pointer{
   cursor: pointer;
+}
+
+.appear-left{
+  animation-name: appear-left;
+  animation-duration: 1000ms;
+}
+
+@keyframes appear-left{
+  0%{
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 

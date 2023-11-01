@@ -87,6 +87,14 @@
   width: unset;
 }
 
+.h-min-100 {
+  min-height: 100%;
+}
+
+.h-100vh {
+  height: 100vh;
+}
+
 .bg-white {
   background-color: var(--white) !important;
 }
@@ -317,6 +325,10 @@
   outline: none !important;
 }
 
+html, body, #app {
+  height: 100%;
+}
+
 a {
   text-decoration: none;
 }
@@ -367,6 +379,21 @@ button {
   cursor: pointer;
 }
 
+.appear-left {
+  animation-name: appear-left;
+  animation-duration: 300ms;
+}
+
+@keyframes appear-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 @media screen and (min-width: 1600px) {
   .padding {
     padding-left: 10em !important;
