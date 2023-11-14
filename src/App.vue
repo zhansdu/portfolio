@@ -13,6 +13,7 @@ export default defineComponent({
   },
   created () {
     this.setTheme();
+    this.setScroll();
     setLocale();
   },
   methods: {
@@ -35,6 +36,23 @@ export default defineComponent({
         head.appendChild(link);
         localStorage.setItem("theme", theme);
       }
+    },
+    setScroll () {
+      const scrollRight = () => {
+        console.log("scroll right");
+      };
+      const scrollContent = () => {
+        console.log("scroll content");
+      };
+      window.addEventListener("scroll", e => {
+        if (window.scrollY > 200) {
+          this.$store.dispatch("setNavRounded");
+        } else {
+          this.$store.dispatch("setNavFlat");
+        }
+        scrollRight(e);
+        scrollContent(e);
+      });
     }
   }
 });

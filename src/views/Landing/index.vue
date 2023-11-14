@@ -59,12 +59,11 @@
   </div>
 </template>
 <script>
-import { defineComponent } from "vue";
 
-export default defineComponent({
+export default {
   components: {
   }
-});
+};
 </script>
 <style scoped type="scss">
 .bg-darker{
@@ -88,6 +87,7 @@ export default defineComponent({
   background:radial-gradient(rgba(255,255,255,.2),rgba(0,0,0,1));
   animation-name:bg-appear;
   animation-duration:5s;
+  /* animation-duration:15s; */
   animation-delay:15s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;

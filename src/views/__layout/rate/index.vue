@@ -16,8 +16,8 @@
           <star />
           <star />
           <star />
-          <div>
-            Hi! rate me please
+          <div class="ms-5">
+            Hi! Rate me please
           </div>
         </div>
       </div>
@@ -33,18 +33,20 @@
       </div>
       <div class="showMore">
         <div
-          class="shapes-wrapper cursor-pointer"
+          class="shapes-wrapper cursor-pointer "
+          :class="{'back':shown}"
           @click="showMore"
         >
-          <div class="triangle" />
+          <div
+            class="triangle"
+            :class="{rotate:shown}"
+          />
         </div>
       </div>
       <div
         class="showMore-wrapper d-flex align-items-center justify-content-center cursor-pointer"
         @click="showMore"
-      >
-        <div class="triangle" />
-      </div>
+      />
     </div>
   </div>
 </template>
@@ -57,14 +59,20 @@ export default {
   },
   data () {
     return {
-      shown: false,
+      shown: true,
       shown_max: false
     };
+  },
+  created () {
+    this.HideRating();
   },
   methods: {
     showMore () {
       this.shown = !this.shown;
       console.log(this.shown);
+    },
+    HideRating () {
+      setTimeout(this.showMore, 3000);
     }
   }
 };
@@ -77,18 +85,9 @@ export default {
   width: 100%;
   display: flex;
   justify-content: center;
-  max-height:50px;
-  animation:showLess;
-  animation-duration: 500ms;
-  animation-delay: 3000ms;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
+  max-height:10px;
 }
-@keyframes showLess {
-  100%{
-    max-height: 10px;
-  }
-}
+
 .shown{
   max-height: 50px !important;
 }
@@ -106,26 +105,25 @@ export default {
   border:1px solid var(--purple);
   box-shadow: 0 0 3px 5px var(--purple);
   border-radius:50px 50px 0 0;
-
+  border-bottom: 0px;
 }
 
 .showMore{
   position:absolute;
-  bottom:-3px;
+  bottom:0;
   right:0;
   height:50px;
   width:100px;
 }
 
 .showMore-wrapper{
-  width:120px;
+  width:65px;
   position: absolute;
   max-height: 50px;
   height:100%;
   top:0px;
-  right:0;
+  right:55px;
   background-color: white;
-  border-top-right-radius: 50px;
 }
 
 .triangle{
@@ -137,11 +135,18 @@ export default {
 .triangle{
   -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+
 }
 
 .shapes-wrapper{
   margin-left: 40px;
-  margin-top: 5px;
+  margin-top: 10px;
+}
+.back{
+  transform:translate3d(5px,15px,0);
+}
+.rotate{
+  transform: rotate(180deg);
 }
 @keyframes jump {
   0%{

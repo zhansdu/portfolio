@@ -1,2 +1,3 @@
 export default {
+  navRounded: false
 };

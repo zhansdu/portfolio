@@ -1,7 +1,13 @@
 <template>
   <nav class="fixed w-100 d-flex align-items-center justify-content-center">
-    <div class="bg-purple-gradient text-darkwhite padding w-100 ">
-      <div class="d-flex justify-content-between align-items-center py-4">
+    <div
+      class="bg-purple-gradient text-darkwhite padding w-100"
+      :class="{'nav-rounded':navRounded}"
+    >
+      <div
+        class="d-flex justify-content-between align-items-center py-4"
+        :class="{'py-2':navRounded}"
+      >
         <!-- brand -->
         <div class="brand">
           ZHANSDU
@@ -36,14 +42,19 @@
   </div> -->
 </template>
 <script>
-import { defineComponent } from "vue";
-export default defineComponent({
-});
+import { mapGetters } from "vuex";
+export default {
+  computed: {
+    ...mapGetters(["navRounded"])
+  }
+
+};
 </script>
 
 <style scoped>
 .bg-purple-gradient{
   background-color: transparent;
+  border:1px solid transparent;
 }
 .fixed{
   position:fixed;
@@ -56,7 +67,8 @@ export default defineComponent({
   background:linear-gradient(var(--darkpurple),var(--purple));
   width:50% !important;
   margin-top: 10px;
-  border-radius:50px
-
+  border-radius:50px;
+  border-color: var(--white);
+  box-shadow: 0 0 1px 1px var(--purple);
 }
 </style>
