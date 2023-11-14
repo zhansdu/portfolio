@@ -1,6 +1,6 @@
 <template>
   <nav class="fixed w-100 d-flex align-items-center justify-content-center">
-    <div class="bg-purple-gradient text-darkwhite padding nav-rounded">
+    <div class="bg-purple-gradient text-darkwhite padding w-100 ">
       <div class="d-flex justify-content-between align-items-center py-4">
         <!-- brand -->
         <div class="brand">
@@ -43,17 +43,20 @@ export default defineComponent({
 
 <style scoped>
 .bg-purple-gradient{
-  background:linear-gradient(var(--darkpurple),var(--purple))
+  background-color: transparent;
 }
 .fixed{
   position:fixed;
   top:0;
   left:0;
+  z-index: 1000;
 }
 
 .nav-rounded{
+  background:linear-gradient(var(--darkpurple),var(--purple));
   width:50% !important;
   margin-top: 10px;
   border-radius:50px
+
 }
 </style>

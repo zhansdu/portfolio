@@ -17,7 +17,7 @@
   /*firefox only scrollbar*/
   scrollbar-color: #c5c5c5 white;
   scrollbar-width: thin;
-  font-family:'SDU_Unique_Media', Verdana, sans-serif ;
+  font-family:Verdana, sans-serif ;
 }
 :not(body){
   transition: .3s;
@@ -29,6 +29,10 @@
 
 html,body,#app{
   height:100%;
+}
+
+body{
+  background-color: var(--purple);
 }
 
 a{

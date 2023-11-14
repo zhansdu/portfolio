@@ -314,7 +314,7 @@
   /*firefox only scrollbar*/
   scrollbar-color: #c5c5c5 white;
   scrollbar-width: thin;
-  font-family: "SDU_Unique_Media", Verdana, sans-serif;
+  font-family: Verdana, sans-serif;
 }
 
 :not(body) {
@@ -327,6 +327,10 @@
 
 html, body, #app {
   height: 100%;
+}
+
+body {
+  background-color: var(--purple);
 }
 
 a {
@@ -381,12 +385,12 @@ button {
 
 .appear-left {
   animation-name: appear-left;
-  animation-duration: 300ms;
+  animation-duration: 1000ms;
 }
 
 @keyframes appear-left {
   0% {
-    transform: translateX(-100px);
+    transform: translateX(-200px);
     opacity: 0;
   }
   100% {
