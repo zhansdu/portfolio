@@ -245,6 +245,36 @@
   background-color: var(--black) !important;
 }
 
+.bg-darkblack {
+  background-color: var(--darkblack) !important;
+}
+
+.text-darkblack {
+  color: var(--darkblack) !important;
+}
+
+.border-darkblack {
+  border-color: var(--darkblack) !important;
+}
+
+.outline-darkblack {
+  color: var(--darkblack) !important;
+  border-color: var(--darkblack) !important;
+  background-color: var(--transparent);
+}
+.outline-darkblack:hover:enabled {
+  background-color: var(--darkblack) !important;
+  color: var(--white) !important;
+}
+
+.text-hover-darkblack:hover:enabled {
+  color: var(--darkblack) !important;
+}
+
+.bg-hover-darkblack:hover:enabled {
+  background-color: var(--darkblack) !important;
+}
+
 .bg-transparent {
   background-color: var(--transparent) !important;
 }
@@ -314,6 +344,7 @@
   /*firefox only scrollbar*/
   scrollbar-color: #c5c5c5 white;
   scrollbar-width: thin;
+  scroll-behavior: smooth;
   font-family: Verdana, sans-serif;
 }
 
@@ -358,6 +389,21 @@ button {
   color: var(--white);
   background-color: var(--white);
   border-radius: 0.3125em;
+}
+
+.scrollable-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollable-content::-webkit-scrollbar {
+  display: none;
 }
 
 .custom_select > select {

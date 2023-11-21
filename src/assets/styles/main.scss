@@ -17,6 +17,7 @@
   /*firefox only scrollbar*/
   scrollbar-color: #c5c5c5 white;
   scrollbar-width: thin;
+  scroll-behavior: smooth;
   font-family:Verdana, sans-serif ;
 }
 :not(body){
@@ -63,7 +64,19 @@ button {
 }
 
 
-
+.scrollable-content{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width:100vw;
+  overflow: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.scrollable-content::-webkit-scrollbar {
+  display: none;
+}
 .custom_select > select{
   border:none;
   background-color:transparent;

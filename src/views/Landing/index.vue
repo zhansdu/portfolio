@@ -1,68 +1,376 @@
 <template>
-  <div class="flex-fill">
-    <div class="bg-darker" />
-    <section
-      id="home"
-      class="position-relative d-flex align-items-center justify-content-center padding text-darkwhite"
+  <div class="scrollable-content">
+    <div
+      class="flex-fill"
     >
-      <div class="changeColor" />
-      <div class="bg-brighter" />
-      <div class="cover" />
-      <div class="backgrounded text-center position-relative p-5 appear-left">
-        <h1>Hi! my name is Zhan</h1>
-        <h1>I am <i>front-end</i> developer</h1>
-        <br>
-        <h2> I don't create design </h2>
-        <h2> But I <strong>DO</strong> make it <strong>REAL</strong></h2>
-        <br>
-        ~~!~~
-        <br>
-        ( this design was created by me, though )
+      <section
+        id="home"
+        class="position-relative d-flex align-items-center justify-content-center padding text-darkwhite"
+      >
+        <div class="bg-darker" />
+        <div class="changeColor" />
+        <div class="bg-brighter" />
+        <div class="cover" />
+        <div class="backgrounded text-center position-relative p-5 appear-left">
+          <h1>Hi! my name is Zhan</h1>
+          <h1>I am <em>front-end</em> developer</h1>
+          <br>
+          <h2> I don't create design </h2>
+          <h2> But I <strong>DO</strong> make it <strong>REAL</strong></h2>
+          <br>
+          ~~!~~
+          <br>
+          ( this design was created by me, though )
+        </div>
+        <div class="slideToNext" />
+      </section>
+      <section
+        id="about"
+        class="d-flex flex-column position-relative"
+      >
+        <div class="slideFromNext" />
+
+        <div class="bg-purple text-white padding">
+          <div class="d-flex flex-fill align-items-center justify-content-center p-4">
+            <div class="mt-5">
+              <h2>THIS website</h2>
+            </div>
+          </div>
+          <div class="appear-left">
+            was created using Vue JS 2 ( options api )
+          </div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+          <div>a lot more content</div>
+        </div>
+      </section>
+      <section
+        id="projects"
+        class="scroll-right bg-purple text-white"
+      >
+        <div class="scroll-right-content padding d-flex flex-wrap bg-white min-vh-100 text-black">
+          some content not to be empty
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+          <div>some content</div>
+        </div>
+      </section>
+      <section
+        id="aboutMe"
+        class="bg-purple text-white padding"
+      >
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+        <div>Some content about me</div>
+      </section>
+    </div>
+    <div class="scrollbar-wrapper px-2 cursor-pointer">
+      <div class="scrollbar cursor-pointer">
+        <div id="scrollbar" />
       </div>
-      <div class="slideToNext" />
-    </section>
-    <section
-      id="about"
-      class="d-flex flex-column position-relative"
-    >
-      <div class="slideFromNext" />
-      <div>there's so much content <br> obviously there'll be scrollbar</div>
-      <div>there's so much content <br> obviously there'll be scrollbar</div>
-      <div>there's so much content <br> obviously there'll be scrollbar</div>
-      <div>there's so much content <br> obviously there'll be scrollbar</div>
-      <div>there's so much content <br> obviously there'll be scrollbar</div>
-      <div>there's so much content <br> obviously there'll be scrollbar</div>
-      <div>there's so much content <br> obviously there'll be scrollbar</div>
-      <div>there's so much content <br> obviously there'll be scrollbar</div>
-      <div>there's so much content <br> obviously there'll be scrollbar</div>
-      <div>there's so much content <br> obviously there'll be scrollbar</div>
-      <div>there's so much content <br> obviously there'll be scrollbar</div>
-      <div>there's so much content <br> obviously there'll be scrollbar</div>
-      <div>there's so much content <br> obviously there'll be scrollbar</div>
-      <div>there's so much content <br> obviously there'll be scrollbar</div>
-      <div>there's so much content <br> obviously there'll be scrollbar</div>
-      <div>there's so much content <br> obviously there'll be scrollbar</div>
-      <div>there's so much content <br> obviously there'll be scrollbar</div>
-      <div>there's so much content <br> obviously there'll be scrollbar</div>
-      <div>there's so much content <br> obviously there'll be scrollbar</div>
-      <div>there's so much content <br> obviously there'll be scrollbar</div>
-      <div>there's so much content <br> obviously there'll be scrollbar</div>
-      <div>there's so much content <br> obviously there'll be scrollbar</div>
-      <div>there's so much content <br> obviously there'll be scrollbar</div>
-      <div>there's so much content <br> obviously there'll be scrollbar</div>
-      <div>there's so much content <br> obviously there'll be scrollbar</div>
-      <div>there's so much content <br> obviously there'll be scrollbar</div>
-      <div>there's so much content <br> obviously there'll be scrollbar</div>
-      <div>there's so much content <br> obviously there'll be scrollbar</div>
-      <div>there's so much content <br> obviously there'll be scrollbar</div>
-    </section>
+    </div>
   </div>
 </template>
 <script>
 
 export default {
-  components: {
-  }
+
 };
 </script>
 <style scoped type="scss">
@@ -85,6 +393,7 @@ export default {
   right: 0;
   opacity: 0;
   background:radial-gradient(rgba(255,255,255,.2),rgba(0,0,0,1));
+  /* background:radial-gradient(rgba(255,255,255,.2),transparent,var(--purple),var(--purple)); */
   animation-name:bg-appear;
   animation-duration:5s;
   /* animation-duration:15s; */
@@ -241,4 +550,40 @@ export default {
   height:100px;
   background: linear-gradient(var(--purple),transparent);
 }
+
+.scrollbar-wrapper{
+  position:fixed;
+  bottom:80px;
+  top:80px;
+  right:40px;
+}
+.scrollbar{
+  height: 100%;
+  width:3px;
+  background-color: var(--darkwhite);
+  border:1px solid var(--purple);
+}
+
+#scrollbar{
+  position:absolute;
+  width:20px;
+  height:20px;
+  border:1px solid var(--darkwhite);
+  border-radius: 50px;
+  background-color: var(--darkpurple);
+  top:var(--translateTop,0px);
+  right:0px;
+  transition: 0;
+}
+
+.scroll-right{
+  width:500vw;
+  height:500vw;
+}
+.scroll-right-content{
+  display: flex;
+  position: sticky;
+  top: 0;
+}
+
 </style>

@@ -31,11 +31,13 @@
           rows="10"
         />
       </div>
-      <div class="showMore">
+      <div
+        class="showMore cursor-pointer "
+        @click="showMore"
+      >
         <div
-          class="shapes-wrapper cursor-pointer "
+          class="shapes-wrapper"
           :class="{'back':shown}"
-          @click="showMore"
         >
           <div
             class="triangle"
@@ -44,8 +46,7 @@
         </div>
       </div>
       <div
-        class="showMore-wrapper d-flex align-items-center justify-content-center cursor-pointer"
-        @click="showMore"
+        class="showMore-wrapper d-flex align-items-center justify-content-center"
       />
     </div>
   </div>

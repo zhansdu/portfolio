@@ -1,7 +1,7 @@
 <template>
   <nav class="fixed w-100 d-flex align-items-center justify-content-center">
     <div
-      class="bg-purple-gradient text-darkwhite padding w-100"
+      class="bg-purple-gradient text-darkwhite padding w-100 transition"
       :class="{'nav-rounded':navRounded}"
     >
       <div
@@ -70,5 +70,8 @@ export default {
   border-radius:50px;
   border-color: var(--white);
   box-shadow: 0 0 1px 1px var(--purple);
+}
+.transition{
+  transition: .8s;
 }
 </style>
