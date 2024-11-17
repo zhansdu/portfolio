@@ -4,6 +4,9 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import i18n from "./locale";
+import PrimeVue from "primevue/config";
+
+import "primevue/resources/themes/lara-light-green/theme.css";
 
 String.prototype.toCapitalize = function () {
   return this.charAt(0).toUpperCase() + this.slice(1);
@@ -22,4 +25,5 @@ createApp(App)
   .use(store)
   .use(router)
   .use(i18n)
+  .use(PrimeVue)
   .mount("#app");

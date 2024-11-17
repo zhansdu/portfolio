@@ -7,6 +7,8 @@ import MainView from "@/views/__layout";
 
 import { setLocale } from "./services/LocaleService";
 
+import { scrollScroller, setupScroller } from "@/components/scrollbar/script";
+
 export default defineComponent({
   components: {
     MainView
@@ -51,51 +53,25 @@ export default defineComponent({
           item.style.transform = "translate(" + -scrollAmount + "px,0)";
         }
       };
-      const scrollScroller = (x, scrollerParent) => {
-        const scrollbarWrapper = document.getElementsByClassName("scrollbar-wrapper")[0];
-        const scroller = document.getElementById("scrollbar");
-        const scrollParent = document.getElementsByClassName("scrollable-content")[0];
-        let ammount = scrollParent.scrollTop / scrollParent.scrollTopMax * 100 + "%";
-        if (x) {
-          const offsetScroll = x.clientY - scrollbarWrapper.offsetTop - scroller.clientHeight / 2;
-          const maxScroll = (scrollbarWrapper.clientHeight);
-          ammount = offsetScroll < 0 ? 0 : offsetScroll > maxScroll ? maxScroll : offsetScroll;
-          scrollParent.scrollTo(0, ammount / maxScroll * scrollParent.scrollTopMax);
-          ammount += "px";
+      const moveNavbar = () => {
+        if (window.scrollY > 200 || document.getElementsByClassName("scrollable-content")[0].scrollTop > 200) {
+          this.$store.dispatch("setNavRounded");
+        } else {
+          this.$store.dispatch("setNavFlat");
         }
-        scroller.style.setProperty("--translateTop", ammount);
       };
-      // const mouseDown = false;
-      // async function moveScrollbar (scroller) {
-      //   while (mouseDown) {
-      //     scroller.style.setProperty("--translateTop", e.clientYs * 100 + "%");
-      //   }
-      // }
       window.addEventListener("load", () => {
         scrollRight();
+        scrollScroller();
+        moveNavbar();
 
         document.getElementsByClassName("scrollable-content")[0].addEventListener("scroll", e => {
-          if (window.scrollY > 200 || document.getElementsByClassName("scrollable-content")[0].scrollTop > 200) {
-            this.$store.dispatch("setNavRounded");
-          } else {
-            this.$store.dispatch("setNavFlat");
-          }
-
-          scrollRight(e);
+          moveNavbar();
+          scrollRight();
           scrollScroller();
         });
-        const scroller = document.getElementsByClassName("scrollbar-wrapper")[0];
-        scroller.addEventListener("mousedown", (e) => {
-          scrollScroller(e);
-          window.addEventListener("mousemove", scrollScroller);
-        });
-        window.addEventListener("mouseup", (e) => {
-          window.removeEventListener("mousemove", scrollScroller);
-        });
 
-        // scroller.addEventListener("mouseout ", (e) => {
-        //   scroller.removeEventListener("mousemove", scrollScroller);
-        // });
+        setupScroller();
       });
     }
   }

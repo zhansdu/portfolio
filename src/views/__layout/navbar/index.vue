@@ -1,12 +1,12 @@
 <template>
   <nav class="fixed w-100 d-flex align-items-center justify-content-center">
     <div
-      class="bg-purple-gradient text-darkwhite padding w-100 transition"
-      :class="{'nav-rounded':navRounded}"
+      class="bg-purple-gradient text-white w-100 transition "
+      :class="[{'blurred nav-rounded px-5':navRounded},{'padding' : !navRounded}]"
     >
       <div
-        class="d-flex justify-content-between align-items-center py-4"
-        :class="{'py-2':navRounded}"
+        class="d-flex justify-content-between align-items-center "
+        :class="[{'py-3':navRounded},{'py-4':!navRounded}]"
       >
         <!-- brand -->
         <div class="brand">
@@ -14,13 +14,17 @@
         </div>
         <div class="d-flex cursor-pointer">
           <a
+            class="lined"
             href="#home"
           >Home</a>
           <a
-            class="px-5"
+            class="lined px-5"
+
             href="#about"
           >Reviews</a>
           <a
+            class="lined"
+
             href="#contact"
           >Contact me</a>
         </div>
@@ -64,8 +68,8 @@ export default {
 }
 
 .nav-rounded{
-  background:linear-gradient(var(--darkpurple),var(--purple));
-  width:50% !important;
+  /* background:linear-gradient(var(--darkpurple),var(--purple)); */
+  width:70% !important;
   margin-top: 10px;
   border-radius:50px;
   border-color: var(--white);
@@ -73,5 +77,10 @@ export default {
 }
 .transition{
   transition: .8s;
+}
+
+.blurred{
+  backdrop-filter: blur(8px);
+  background-color: rgba(31,1,26,.6);
 }
 </style>

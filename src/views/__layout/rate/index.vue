@@ -97,6 +97,7 @@ export default {
 }
 .rate{
   width:50%;
+  min-width: 500px;
   padding:15px 50px;
   border-bottom:none;
   position:relative;

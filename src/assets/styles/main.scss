@@ -18,10 +18,10 @@
   scrollbar-color: #c5c5c5 white;
   scrollbar-width: thin;
   scroll-behavior: smooth;
-  font-family:Verdana, sans-serif ;
+  font-family:inherit ;
 }
 :not(body){
-  transition: .3s;
+  transition: inherit;
 }
 
 *:focus {
@@ -34,10 +34,34 @@ html,body,#app{
 
 body{
   background-color: var(--purple);
+  transition: .3s;
+  font-family: Verdana, sans-serif;
 }
 
 a{
   text-decoration: none;
+  color:inherit
+}
+a:hover{
+  color:inherit;
+}
+a.lined:after{
+  content:'';
+  width: 0%;
+  height:2px;
+  background-color:white;
+  display: block;
+}
+a.lined:hover::after{
+  content:'';
+  animation-name: appear;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+@keyframes appear {
+  100%{
+    width:100%;
+  }
 }
 
 input,
@@ -98,22 +122,6 @@ button {
 
 .cursor-pointer{
   cursor: pointer;
-}
-
-.appear-left{
-  animation-name: appear-left;
-  animation-duration: 1000ms;
-}
-
-@keyframes appear-left{
-  0%{
-    transform: translateX(-200px);
-    opacity: 0;
-  }
-  100%{
-    transform: translateX(0);
-    opacity: 1;
-  }
 }
 
 
